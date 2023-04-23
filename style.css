@@ -1,0 +1,243 @@
+@font-face {
+  font-family: Trueno;
+  src: url(assets/font/trueno_round.otf);
+}
+html {
+    width: 100%;
+    background: #161616;
+    margin: 0;
+}
+body {
+    height: 100%;
+    width: 100%;
+    background: #161616;
+    margin: 0;
+}
+
+body * {
+    font-family: "trueno";
+    font-size: 2vh;
+}
+
+form * {
+    margin: 0.5vh;
+}
+
+form label {
+    font-weight: bold;
+    color: #F4F4F3;
+}
+
+button#picker {
+    background-color: #3289c7;
+    color: white;
+}
+input[type = number], button, select {
+    width: 12vw;
+    background-color: #F4F4F3;
+    border-width: 0.3vw;
+    border-radius: 0.2vw;
+    border-color: #F4F4F3;
+    border-style: solid;
+}
+
+input[type = date] {
+    width: 24px;
+    background-color: #F4F4F3;
+    border-width: 0.3vw;
+    border-radius: 0.2vw;
+    border-color: #F4F4F3;
+    border-style: solid;
+}
+
+img.connectButton {
+    padding: 0px;
+    border-width: 0px;
+    margin: 0px;
+}
+.connectButton {
+    display: inline-block;
+    border: none;
+    background: none;
+    width: 13vw;
+    height: auto;
+    margin: 0vw;
+    margin-bottom: 1.5vh;
+    margin-top: 0.5vh;
+}
+
+#picker {
+    border-width: 0.3vw;
+    border-radius: 0.2vw;
+    border-color: #F4F4F3;
+    border-style: solid;
+    background-color: #F4F4F3;
+}
+#statsSubmit {
+    margin-top: 1.5vh;
+    padding: 0.45vw;
+    background-color: #F4F4F3;
+    border-width: 0.3vw;
+    border-radius: 0.2vw;
+    border-color: #F4F4F3;
+    border-style: solid;
+}
+
+#map {
+    width: 85vw;
+    height: 100vh;
+    float: right;
+    position: fixed;
+    top: 0;
+    right: 0;
+}    
+
+#activityListContainer {
+    height: 20vh;
+    width: 13.5vw;
+    margin-top: 1vw;
+    background-color: #1c1c1c;
+    overflow-y: auto;
+    line-height: 15px;
+}
+
+#activityListContainer * {
+    color: #E9E9E8;
+    font-size: 9px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+.activityListItem:hover {
+    text-decoration: underline;
+}
+
+p {
+    font-family: "Trueno";
+}
+
+.activityTitle {
+    font-weight: bold;
+}
+
+.date {
+    color: darkgrey;
+}
+
+#downloadLinks {
+    position: absolute;
+    bottom: 0.8vh;
+    width: 14vw;
+    text-align: right;
+}
+.download {
+    vertical-align: top;
+    color: #F4F4F3;
+    cursor: pointer;
+}
+.download:hover {
+    text-decoration: underline;
+}
+#stravaCompat {
+    width: 4vw;
+    position: relative;
+    bottom: 0;
+}
+
+#footerTable {
+    position: absolute;
+    bottom: 0px; 
+    left: 0px;
+}
+
+/* Mobile Styles (Not mobile first because this isn't meant to have great mobile support.) */
+@media screen and (orientation: portrait) {
+    body {
+        height: 100%;
+    }
+    body * {
+        font-size: 14px;
+    }
+    table {
+        width: 50%;
+        top: 0;
+    }
+
+    .rightTable {
+        float: right;
+        position: absolute;
+        width: 48%;
+        right: 0px;
+        top: 1vh;
+    }
+    td {
+        width: 48%;
+    }
+    #map {
+        margin-top: auto;
+        width: 100vw;
+        height: 45vh;
+        float: none;
+        position: fixed;
+        display: flex;
+        bottom: 0vh;
+    }    
+    #activityListContainer {
+        margin-left: 0px;
+        width: 100vw;
+        height: 40vh;
+    }
+    .connectButton {
+        width: 42vw;
+        margin-bottom: 2vh;
+    }
+    
+    button, select {
+        width: 42vw;
+    }
+    input[type = number] {
+        width: 41vw;
+    }
+
+    input[type = date] {
+        width: 24px;
+    }
+    #statsSubmit {
+
+    }
+    #privateActivities {
+        width: 20px;
+        margin-left: 0px;
+    }
+
+    a.download {
+        bottom: 0;
+        
+    }    
+    #footerTable {
+        right: 0;
+        top: 0;
+        position: fixed;
+        width: 12vw;
+        margin: auto;
+        margin-right: 0;
+    }
+    #footerTable2 {
+        top: 55vh;
+        right: 0.1vw; 
+        position: fixed;
+        width: 16vw;
+    }
+    img#stravaCompat {
+        width: 14vw;
+    }
+    #downloadLinks * {
+        font-size: 3vw;
+    }
+}
+
+#hitCount {
+    visibility: hidden;
+    display: none;
+    z-index: 99;
+}
