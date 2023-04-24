@@ -102,7 +102,7 @@ async function getUserStats(id) {
 
 
 function printAthleteInfo() {
-    getUserData();
+    userData = getUserData();
     const id = userData.id;
     const username = userData.username;
     const name = `${userData.firstname} ${userData.lastname}`;
