@@ -2,6 +2,7 @@ const clientId = '98135';
 const clientSecret = '250fb83eda23244fd4a165a4a8565f398a5e1e56';
 var code;
 var userData
+var userStats
 var data
 var accessToken
 var activityData
@@ -76,7 +77,7 @@ async function getUserData() {
             },
         });
         userData = await response.json();
-        console.log("User Profile Information: " + userData);
+        console.log(userData);
         return userData;
     } else {
         console.log("User profile information already present: " + userData)
@@ -84,7 +85,7 @@ async function getUserData() {
 }
 
 async function getUserStats(id) {
-    if (!activityData) {
+    if (!userStats) {
         const apiUrl = `https://www.strava.com/api/v3/athletes/${id}/stats`;
         const response = await fetch(apiUrl, {
             headers: {
@@ -92,10 +93,10 @@ async function getUserStats(id) {
             },
         });
         userStats = await response.json();
-        console.log("User Activity Statistics: " + userStats);
+        console.log(userStats);
         return userStats;
     } else {
-        console.log("User Activity Statistics Already Present: " + activityData)
+        console.log("User Stats Already Present")
     }
 }
 
