@@ -31,8 +31,6 @@ $("#connectButton").click(function () {
     authenticate()
 })
 
-
-
 // Get the authorization code from the URL
 function getURLCode() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -117,7 +115,6 @@ function printAthleteInfo() {
     const runStats = userStats.all_run_totals
     console.log(`All-Time Cycling Stats: ${rideStats}`)
     console.log(`All-Time Running Stats: ${runStats}`)
-
 }
 
 function formatDate(notFormatted) {
